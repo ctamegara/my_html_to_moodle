@@ -1,0 +1,204 @@
+<div-sec> Title </div-sec>
+
+<p> In the following video you will see .... </p>
+
+<p> Note that .... </p>
+
+
+<p> Test your skills ! <br> 
+    Here are some problems. 
+    Find an answer, and then check the proposed solution !</p>
+
+<dropdown>
+    <ddq>
+        Let \(X\) be a random variable. We know that
+        <ul>
+        <li> \(P(X\in [0,2] )= .7 \)</li>
+        <li> \(P(X\in [1,3] )= .7\)</li>
+        </ul>
+        
+        Prove that \(P(X\in[1,2])\geq .4\).
+    </ddq>
+    <dda>
+        We note that, writing $I=[0,2]$ and $J=[1,3]$, we have $I\cap J=[1,2]$.
+        From the formula $$ P(X\in I\cup J)=P(X\in I)+P(X\in J)-P(X\in I\cap J)$$ 
+        we deduce the equality
+        $$ P(X\in I\cap J)]=P(X\in I)+P(X\in J)-P(X\in I\cup J) \ .$$ 
+        Moreover, we know $P(X\in \text{{whatever}})\leq 1$, so $$P(X\in I\cup J)\leq 1\ .$$
+        Finally :
+        $$ P(X\in I\cap J)]=.7+.7-P(X\in I\cup J)\geq 1.4-1=.4$$
+
+    </dda>
+
+</dropdown>
+
+
+<dropdown>
+    <ddq>
+        Find the error in the following code:
+        <code>
+            def f(x):
+                for i in range(100):
+                    if x = i :
+                        print(x)
+        </code>
+    </ddq>
+    <dda>
+        The operator "=" affects a value to a variable. Here we should use the comparison operator "==":
+        
+        <code>
+            def f(x):
+                for i in range(100):
+                    if x == i :
+                        print(x)
+        </code>
+    </dda>
+
+</dropdown>
+
+<br><br>
+<p> And now a little quizz :</p>
+<br>
+
+
+<quizz>
+
+    Pour chacun des codes suivants, identifiez la valeur retournée
+
+    <q-block>
+        <q1> 
+            <code>
+class avion :
+    def __init__(self, moteur , ailes)
+        self.moteur=moteur
+        self.ailes=ailes
+        
+X=avion("100000 chevaux","10 mètres")
+print(X.moteur)
+
+            </code>
+        </q1>
+        <a1> <c>"100000 chevaux"</c> </a1>
+        <a1>"10 mètres"</a1>
+
+    </q-block>
+
+
+    <q-block>
+        <q1> 
+        <code>
+class avion :
+    def __init__(self, moteur , ailes)
+        self.moteur=moteur
+        self.ailes=ailes
+        
+X=avion("moteur","ailes")
+print(X.moteur)
+
+        </code></q1>
+        <a1>"ailes" </a1>
+        <a1><c>"moteur"</c></a1>
+
+    </q-block>
+
+
+
+    <q-block>
+        <q1> 
+        <code>
+class avion :
+    def __init__(self, moteur , ailes)
+        self.moteur=moteur
+        self.ailes=ailes
+        
+X=avion("ailes", "moteur")
+print(X.moteur)
+
+        </code></q1>
+        <a1><c>"ailes"</c> </a1>
+        <a1>"moteur"</a1>
+
+    </q-block>
+
+
+
+    <q-block>
+        <q1> 
+        <code>
+class avion :
+    def __init__(self, moteur , ailes)
+        self.ailes=moteur
+        self.moteur=ailes
+        
+X=avion("ailes", "moteur")
+print(X.moteur)
+
+        </code></q1>
+        <a1>"ailes"</c> </a1>
+        <a1><c>"moteur"</c></a1>
+
+    </q-block>
+
+
+
+</quizz>
+
+<br><br>
+<p>and another one :<p>
+<br>
+
+<quizz>
+
+    <q-block>
+        <q1> 
+            question 1
+        </q1>
+        <a1> <c> correct answer 1</c> </a1>
+        <a1>bad answer 1</a1>
+        <a1>another bad answer 1</a1>
+    </q-block>
+
+
+    <q-block>
+        <q1> 
+            question 2
+        </q1>
+        <a1>bad answer 2</a1>
+        <a1> <c> correct answer 2</c> </a1>
+        <a1>another bad answer 2</a1>
+    </q-block>
+
+
+    <q-block>
+        <q1> 
+            question 3
+        </q1>
+        <a1>bad answer 3.1</a1>
+        <a1>bad answer 3.2</a1>
+        <a1>bad answer 3.3</a1>
+        <a1>bad answer 3.4</a1>
+        <a1> <c> correct answer 3</c> </a1>
+        
+    </q-block>
+
+
+    <q-block>
+        <q1> 
+            question 4
+        </q1>
+        <a1> <c> correct answer 4</c> </a1>
+        <a1>bad answer 4</a1>
+    </q-block>
+
+    <q-block>
+        <q1> 
+            question 5
+        </q1>
+        <a1> <c> correct answer 5</c> </a1>
+        <a1>bad answer 5</a1>
+    </q-block>
+</quizz>  
+
+
+
+

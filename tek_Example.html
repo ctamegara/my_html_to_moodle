@@ -1,0 +1,406 @@
+<div style="background-color:#2B2B2B; padding:10px; font-family: monospace; font-size: 14px; color:#DDDDDD;">
+<br>
+<h2 style='text-align:center ; background-color : #2B2B2B; color:#AAAAFF; max-width:75%; margin:auto; border : 3px solid #A0A0FF ; border-radius: 15px; padding:10px;'><b> Title </b></h2>
+<br>
+
+
+<p> In the following video you will see .... </p>
+
+<p> Note that .... </p>
+
+
+<p> Test your skills ! <br> 
+    Here are some problems. 
+    Find an answer, and then check the proposed solution !</p>
+
+<div class="container p-3 my-3 bg-dark text-white style="margin:10%;width:80%;border:1px solid #BDBDBD;border-radius:5px;padding:10px;padding-left:25px;"><div class="container p-3 my-3 bg-dark text-white"><h3 style="color: white"> Problem 1 :</h3><br>
+        Let \(X\) be a random variable. We know that
+        <ul>
+        <li style="left-margin:15px"> \(P(X\in [0,2] )= .7 \)</li>   
+        <li style="left-margin:15px"> \(P(X\in [1,3] )= .7\)</li>   
+        </ul> <br>
+        
+        Prove that \(P(X\in[1,2])\geq .4\).
+    </div>
+    <script> 
+    
+    function dropdown1() {
+        var line=[0, 1, 0, 1, 0, 1, 0, 2, 0, 2, 0, 1, 0, 2, 0, 2, 0];
+        var texts= ['<br>        We note that, writing ', ' and ', ', we have ', '.<br>        From the formula ', ' <br>        we deduce the equality<br>        ', ' <br>        Moreover, we know ', ', so ', '<br>        Finally :<br>        ', '<br><br>    '];
+        var ms = ['I=[0,2]', 'J=[1,3]', 'I\\cap J=[1,2]', 'P(X\\in \\text{{whatever}})\\leq 1'];
+        var mms=[' P(X\\in I\\cup J)=P(X\\in I)+P(X\\in J)-P(X\\in I\\cap J)', ' P(X\\in I\\cap J)]=P(X\\in I)+P(X\\in J)-P(X\\in I\\cup J) \\ .', 'P(X\\in I\\cup J)\\leq 1\\ .', ' P(X\\in I\\cap J)]=.7+.7-P(X\\in I\\cup J)\\geq 1.4-1=.4'];
+        var prep = MathJax.Hub.getAllJax("viewer1");
+        for (let i = 0; i < texts.length; i++) {
+            var k = i;
+            var k = "text_1_" + k.toString();
+            a = document.getElementById(k);
+            a.innerHTML = texts[i];
+        };
+        var c=0;
+        var cm=0;
+        var cmm=0;
+        for (let i = 0; i < line.length; i++) {
+            if (line[c]==0) { c+=1; };
+            if (line[c]==1) {MathJax.Hub.Queue(["Text", prep[i], ms[cm]]); c+=1; cm+=1;};
+            if (line[c]==2) {MathJax.Hub.Queue(["Text", prep[i], mms[cmm]]);c+=1; cmm+=1;};
+        };
+    };
+    </script>
+
+
+    <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle  bg-dark text-white" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="dropdown1()">
+        see the solution
+    </button>
+    <div id="viewer1" class="dropdown-menu p-3 mb-2 bg-secondary text-black" aria-labelledby="dropdownMenuButton" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, -30px, 0px); top: 0px; left: 0px; will-change: transform;" x-out-of-boundaries="">
+    <span id="text_1_0">  </span>\({{}}\)<span id="text_1_1">  </span>\({{}}\)<span id="text_1_2">  </span>\({{}}\)<span id="text_1_3">  </span><p style="text-align:center">  \[{{}}\]  </p><span id="text_1_4">  </span><p style="text-align:center">  \[{{}}\]  </p><span id="text_1_5">  </span>\({{}}\)<span id="text_1_6">  </span><p style="text-align:center">  \[{{}}\]  </p><span id="text_1_7">  </span><p style="text-align:center">  \[{{}}\]  </p><span id="text_1_8">  </span>
+    </div>
+    </div>
+  </div>
+
+
+<div class="container p-3 my-3 bg-dark text-white style="margin:10%;width:80%;border:1px solid #BDBDBD;border-radius:5px;padding:10px;padding-left:25px;"><div class="container p-3 my-3 bg-dark text-white"><h3 style="color: white"> Problem 2 :</h3><br>
+        Find the error in the following code:
+        <div style="background-color : #202020; color:#D0D0D0; font-family: monospace; font-size: 12px; font-style: normal; font-variant: normal; font-weight: 600; line-height: 20px; width:50%; margin:auto ;padding-left:2%"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:#9D72CA">def </b><b style="color:#BFC469">f</b>(x):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:#9D72CA">for </b>i <b style="color:#9D72CA">in </b><b style="color:#BFC469">range</b>(100):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:#9D72CA">if</b> x = i :<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:#BFC469">print</b>(x)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><br>
+    </div>
+    <script> 
+    
+    function dropdown2() {
+        var line=[0];
+        var texts= ['<br>        The operator "=" affects a value to a variable. Here we should use the comparison operator "==":<br>        <br>        <div style="background-color : #202020; color:#D0D0D0; font-family: monospace; font-size: 12px; font-style: normal; font-variant: normal; font-weight: 600; line-height: 20px; width:50%; margin:auto ;padding-left:2%"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:#9D72CA">def </b><b style="color:#BFC469">f</b>(x):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:#9D72CA">for </b>i <b style="color:#9D72CA">in </b><b style="color:#BFC469">range</b>(100):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:#9D72CA">if</b> x == i :<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:#BFC469">print</b>(x)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><br><br>    '];
+        var ms = [];
+        var mms=[];
+        var prep = MathJax.Hub.getAllJax("viewer2");
+        for (let i = 0; i < texts.length; i++) {
+            var k = i;
+            var k = "text_2_" + k.toString();
+            a = document.getElementById(k);
+            a.innerHTML = texts[i];
+        };
+        var c=0;
+        var cm=0;
+        var cmm=0;
+        for (let i = 0; i < line.length; i++) {
+            if (line[c]==0) { c+=1; };
+            if (line[c]==1) {MathJax.Hub.Queue(["Text", prep[i], ms[cm]]); c+=1; cm+=1;};
+            if (line[c]==2) {MathJax.Hub.Queue(["Text", prep[i], mms[cmm]]);c+=1; cmm+=1;};
+        };
+    };
+    </script>
+
+
+    <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle  bg-dark text-white" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="dropdown2()">
+        see the solution
+    </button>
+    <div id="viewer2" class="dropdown-menu p-3 mb-2 bg-secondary text-black" aria-labelledby="dropdownMenuButton" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, -30px, 0px); top: 0px; left: 0px; will-change: transform;" x-out-of-boundaries="">
+    <span id="text_2_0">  </span>
+    </div>
+    </div>
+  </div>
+
+<br><br>
+<p> And now a little quizz :</p>
+<br>
+
+
+<div class="container p-3 my-3 bg-dark text-white">
+
+<script>
+    function submitQuiz_1() {
+
+        for( var i=1; i<4+1;i++){
+            
+            document.getElementById('correctAnswer'+i.toString() +'_1').innerHTML = "";
+            };
+        
+
+        function answerScore_1(qName) {
+            var radiosNo = document.getElementsByName(qName);
+
+            for (var i = 0, length = radiosNo.length; i < length; i++) {
+                if (radiosNo[i].checked) {
+                    var answerValue = Number(radiosNo[i].value);
+                }
+            }
+            if (isNaN(answerValue)) {
+                answerValue = 0;
+            }
+            return answerValue;
+        }        
+        var calcScore = 0
+        var answerscore = 0
+        for( var i=1; i<4+1;i++)
+            {calcScore += answerScore_1('q'+i.toString() +'_1');};
+
+        function correctAnswer(correctStringNo, qNumber) {
+            console.log(correctStringNo);
+            return ("The correct answer for question " + qNumber + " was : &nbsp;<strong>" +
+                (document.getElementById(correctStringNo).innerHTML) + "</strong>");
+        }
+
+        for( var i=1; i<4+1;i++){
+            if (answerScore_1('q'+i.toString() +'_1') === 0) {
+                document.getElementById('correctAnswer'+i.toString() +'_1').innerHTML = correctAnswer('correctString'+i.toString() +'_1', i);
+            };
+        };
+        
+
+        var questionCountArray = 4; 
+
+        var questionCounter = 4;
+
+        var showScore = "Your score: " + calcScore + "/" + questionCounter;
+        if (calcScore === questionCounter) {
+            showScore = showScore + "&nbsp; <strong>Perfect !</strong>"
+        };
+        document.getElementById('userScore1').innerHTML = showScore;
+    }
+
+    //$(document).ready(function() {
+
+        //$('#submitButton').click(function() {
+        //    $(this).addClass('hide');
+        //});
+
+    //});
+</script>
+<h3 style="color: white"> Quiz 1 :</h3>
+
+    Pour chacun des codes suivants, identifiez la valeur retournée
+
+    <div>
+        <p><p ><strong> Q1</strong>  
+            <div style="background-color : #202020; color:#D0D0D0; font-family: monospace; font-size: 12px; font-style: normal; font-variant: normal; font-weight: 600; line-height: 20px; width:50%; margin:auto ;padding-left:2%"><br><b style="color:#9D72CA">class </b>avion :<br>&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:#9D72CA">def </b><b style="color:#BFC469">__init__</b>(<b style="color:#9D72CA">self</b>, moteur , ailes)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:#9D72CA">self</b>.moteur=moteur<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:#9D72CA">self</b>.ailes=ailes<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>X=<b style="color:#BFC469">avion</b>(<span style="color:#AC87A5">"100000 chevaux"</span>,<span style="color:#AC87A5">"10 mètres"</span>)<br><b style="color:#BFC469">print</b>(X.moteur)<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><br>
+         </p></p><ul>
+         <input type="radio" name="q1_1" value="1">
+                                    <label id="correctString1_1">"100000 chevaux"</label><br> 
+        <input type="radio" name="q1_1" value="0">
+                                    <label>"10 mètres"</label><br>
+
+    </ul></div>
+
+
+
+    <div>
+        <p><p ><strong> Q2</strong>  
+        <div style="background-color : #202020; color:#D0D0D0; font-family: monospace; font-size: 12px; font-style: normal; font-variant: normal; font-weight: 600; line-height: 20px; width:50%; margin:auto ;padding-left:2%"><br><b style="color:#9D72CA">class </b>avion :<br>&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:#9D72CA">def </b><b style="color:#BFC469">__init__</b>(<b style="color:#9D72CA">self</b>, moteur , ailes)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:#9D72CA">self</b>.moteur=moteur<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:#9D72CA">self</b>.ailes=ailes<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>X=<b style="color:#BFC469">avion</b>(<span style="color:#AC87A5">"moteur"</span>,<span style="color:#AC87A5">"ailes"</span>)<br><b style="color:#BFC469">print</b>(X.moteur)<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><br> </p></p><ul>
+        <input type="radio" name="q2_1" value="0">
+                                    <label>"ailes" </label><br>
+        <input type="radio" name="q2_1" value="1">
+                                    <label id="correctString2_1">"moteur"</label><br>
+
+    </ul></div>
+
+
+
+
+    <div>
+        <p><p ><strong> Q3</strong>  
+        <div style="background-color : #202020; color:#D0D0D0; font-family: monospace; font-size: 12px; font-style: normal; font-variant: normal; font-weight: 600; line-height: 20px; width:50%; margin:auto ;padding-left:2%"><br><b style="color:#9D72CA">class </b>avion :<br>&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:#9D72CA">def </b><b style="color:#BFC469">__init__</b>(<b style="color:#9D72CA">self</b>, moteur , ailes)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:#9D72CA">self</b>.moteur=moteur<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:#9D72CA">self</b>.ailes=ailes<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>X=<b style="color:#BFC469">avion</b>(<span style="color:#AC87A5">"ailes"</span>, <span style="color:#AC87A5">"moteur"</span>)<br><b style="color:#BFC469">print</b>(X.moteur)<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><br> </p></p><ul>
+        <input type="radio" name="q3_1" value="1">
+                                    <label id="correctString3_1">"ailes"</label><br> 
+        <input type="radio" name="q3_1" value="0">
+                                    <label>"moteur"</label><br>
+
+    </ul></div>
+
+
+
+
+    <div>
+        <p><p ><strong> Q4</strong>  
+        <div style="background-color : #202020; color:#D0D0D0; font-family: monospace; font-size: 12px; font-style: normal; font-variant: normal; font-weight: 600; line-height: 20px; width:50%; margin:auto ;padding-left:2%"><br><b style="color:#9D72CA">class </b>avion :<br>&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:#9D72CA">def </b><b style="color:#BFC469">__init__</b>(<b style="color:#9D72CA">self</b>, moteur , ailes)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:#9D72CA">self</b>.ailes=moteur<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:#9D72CA">self</b>.moteur=ailes<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>X=<b style="color:#BFC469">avion</b>(<span style="color:#AC87A5">"ailes"</span>, <span style="color:#AC87A5">"moteur"</span>)<br><b style="color:#BFC469">print</b>(X.moteur)<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><br> </p></p><ul>
+        <input type="radio" name="q4_1" value="0">
+                                    <label>"ailes" </label><br>
+        <input type="radio" name="q4_1" value="1">
+                                    <label id="correctString4_1">"moteur"</label><br>
+
+    </ul></div>
+
+
+
+
+
+<div class="submitter">
+      <input class="quizSubmit" id="submitButton" onClick="submitQuiz_1()"
+      type="submit" value="Hop !" />
+</div>
+
+    <div class="quizAnswers" id="correctAnswer1_1"></div>
+        
+    <div class="quizAnswers" id="correctAnswer2_1"></div>
+        
+    <div class="quizAnswers" id="correctAnswer3_1"></div>
+        
+    <div class="quizAnswers" id="correctAnswer4_1"></div>
+        
+
+<div>
+    <p id="userScore1" style="text-align:center;font-size: 14px; font-style: normal; font-variant: normal; font-weight: 800;"></p>
+</div>
+</div>
+
+
+<br><br>
+<p>and another one :<p>
+<br>
+
+<div class="container p-3 my-3 bg-dark text-white">
+
+<script>
+    function submitQuiz_2() {
+
+        for( var i=1; i<5+1;i++){
+            
+            document.getElementById('correctAnswer'+i.toString() +'_2').innerHTML = "";
+            };
+        
+
+        function answerScore_2(qName) {
+            var radiosNo = document.getElementsByName(qName);
+
+            for (var i = 0, length = radiosNo.length; i < length; i++) {
+                if (radiosNo[i].checked) {
+                    var answerValue = Number(radiosNo[i].value);
+                }
+            }
+            if (isNaN(answerValue)) {
+                answerValue = 0;
+            }
+            return answerValue;
+        }        
+        var calcScore = 0
+        var answerscore = 0
+        for( var i=1; i<5+1;i++)
+            {calcScore += answerScore_2('q'+i.toString() +'_2');};
+
+        function correctAnswer(correctStringNo, qNumber) {
+            console.log(correctStringNo);
+            return ("The correct answer for question " + qNumber + " was : &nbsp;<strong>" +
+                (document.getElementById(correctStringNo).innerHTML) + "</strong>");
+        }
+
+        for( var i=1; i<5+1;i++){
+            if (answerScore_2('q'+i.toString() +'_2') === 0) {
+                document.getElementById('correctAnswer'+i.toString() +'_2').innerHTML = correctAnswer('correctString'+i.toString() +'_2', i);
+            };
+        };
+        
+
+        var questionCountArray = 5; 
+
+        var questionCounter = 5;
+
+        var showScore = "Your score: " + calcScore + "/" + questionCounter;
+        if (calcScore === questionCounter) {
+            showScore = showScore + "&nbsp; <strong>Perfect !</strong>"
+        };
+        document.getElementById('userScore2').innerHTML = showScore;
+    }
+
+    //$(document).ready(function() {
+
+        //$('#submitButton').click(function() {
+        //    $(this).addClass('hide');
+        //});
+
+    //});
+</script>
+<h3 style="color: white"> Quiz 2 :</h3>
+
+    <div>
+        <p><p ><strong> Q1</strong>  
+            question 1
+         </p></p><ul>
+         <input type="radio" name="q1_2" value="1">
+                                    <label id="correctString1_2"> correct answer 1</label><br> 
+        <input type="radio" name="q1_2" value="0">
+                                    <label>bad answer 1</label><br>
+        <input type="radio" name="q1_2" value="0">
+                                    <label>another bad answer 1</label><br>
+    </ul></div>
+
+
+
+    <div>
+        <p><p ><strong> Q2</strong>  
+            question 2
+         </p></p><ul>
+        <input type="radio" name="q2_2" value="0">
+                                    <label>bad answer 2</label><br>
+         <input type="radio" name="q2_2" value="1">
+                                    <label id="correctString2_2"> correct answer 2</label><br> 
+        <input type="radio" name="q2_2" value="0">
+                                    <label>another bad answer 2</label><br>
+    </ul></div>
+
+
+
+    <div>
+        <p><p ><strong> Q3</strong>  
+            question 3
+         </p></p><ul>
+        <input type="radio" name="q3_2" value="0">
+                                    <label>bad answer 3.1</label><br>
+        <input type="radio" name="q3_2" value="0">
+                                    <label>bad answer 3.2</label><br>
+        <input type="radio" name="q3_2" value="0">
+                                    <label>bad answer 3.3</label><br>
+        <input type="radio" name="q3_2" value="0">
+                                    <label>bad answer 3.4</label><br>
+         <input type="radio" name="q3_2" value="1">
+                                    <label id="correctString3_2"> correct answer 3</label><br> 
+        
+    </ul></div>
+
+
+
+    <div>
+        <p><p ><strong> Q4</strong>  
+            question 4
+         </p></p><ul>
+         <input type="radio" name="q4_2" value="1">
+                                    <label id="correctString4_2"> correct answer 4</label><br> 
+        <input type="radio" name="q4_2" value="0">
+                                    <label>bad answer 4</label><br>
+    </ul></div>
+
+
+    <div>
+        <p><p ><strong> Q5</strong>  
+            question 5
+         </p></p><ul>
+         <input type="radio" name="q5_2" value="1">
+                                    <label id="correctString5_2"> correct answer 5</label><br> 
+        <input type="radio" name="q5_2" value="0">
+                                    <label>bad answer 5</label><br>
+    </ul></div>
+
+
+<div class="submitter">
+      <input class="quizSubmit" id="submitButton" onClick="submitQuiz_2()"
+      type="submit" value="Hop !" />
+</div>
+
+    <div class="quizAnswers" id="correctAnswer1_2"></div>
+        
+    <div class="quizAnswers" id="correctAnswer2_2"></div>
+        
+    <div class="quizAnswers" id="correctAnswer3_2"></div>
+        
+    <div class="quizAnswers" id="correctAnswer4_2"></div>
+        
+    <div class="quizAnswers" id="correctAnswer5_2"></div>
+        
+
+<div>
+    <p id="userScore2" style="text-align:center;font-size: 14px; font-style: normal; font-variant: normal; font-weight: 800;"></p>
+</div>
+</div>
+  
+
+
+
+
+</div>
